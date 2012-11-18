@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block basecontent %}
+<div class="container {% block maincontainerclass %}{% endblock %}">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="well sidebar-nav">
+                {% block sidebar %}
+
+                {% endblock %}
+            </div><!--/.well -->
+        </div><!--/span-->
+        {% block content %}
+
+        {% endblock %}
+    </div><!--/row-->
+</div>
+{% endblock %}
