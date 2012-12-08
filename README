@@ -1,1 +1,3 @@
 Django Template Project with Bootstrap
+
+django-admin.py startapp --template=https://github.com/mmcardle/django_templates/archive/master.zip YOUR_APP_NAME
