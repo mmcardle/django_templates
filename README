@@ -1,5 +1,11 @@
-Django Template Project
+Django Template Project with Bootstrap
 
 This is my default project starter, includes all my default apps plus bootstrap.
 
-django-admin.py startapp --template=https://github.com/mmcardle/django_templates/archive/master.zip YOUR_APP_NAME
+git clone git+https://github.com/mmcardle/django_templates
+
+# Django 1.4
+django-admin.py startproject --template=./django_templates/project_template_1.4 YOUR_APP_NAME
+
+# Django 1.5
+django-admin.py startproject --template=./django_templates/project_template_1.5 YOUR_APP_NAME
