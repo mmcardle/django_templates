@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.auth.views import login
+from django.conf.urls.static import static
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -15,7 +16,14 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin_tools/', include('admin_tools.urls')),
+	url(r"^su/", include("django_su.urls")),
+
+	# Auth
+	url(r"^auth/", include("django.contrib.auth.urls")),
 )
 
 if settings.DEBUG:
-    urlpatterns += staticfiles_urlpatterns()
+	urlpatterns += patterns("",
+		url(r"", include("django.contrib.staticfiles.urls")),
+	) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

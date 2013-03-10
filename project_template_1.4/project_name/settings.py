@@ -139,6 +139,19 @@ INSTALLED_APPS = (
     'django_static',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+	# default template context processors
+	'django.contrib.auth.context_processors.auth',
+	'django.core.context_processors.debug',
+	'django.core.context_processors.i18n',
+	'django.core.context_processors.media',
+	'django.core.context_processors.static',
+	# required by django-admin-tools
+	'django.core.context_processors.request',
+)
+
+INTERNAL_IPS = ('127.0.0.1',)
+
 # Configure App - django_static
 DJANGO_STATIC = True
 DJANGO_STATIC_MEDIA_ROOTS = [PROJECT_DIR]

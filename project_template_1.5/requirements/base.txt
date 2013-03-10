@@ -1,0 +1,7 @@
+Django==1.5
+django-extensions==1.0.1
+South==0.7.6
+django-su==0.2
+django-admin-tools==0.5.0
+django-crispy-forms==1.2.3
+django-static==1.5.5
