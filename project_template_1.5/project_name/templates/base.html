@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static django_static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Projects Name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    {% block style_base %}
+    <!-- START SLIM -->
+    {% slimall %}
+    {{ block.super }}
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    {% endslimall %}
+    <!-- END SLIM -->
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="{% static 'bootstrap/css/bootstrap-responsive.css' %}" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- POST EXTRA STYLE -->
+    {% block post_extra_style %}{% endblock %}
+    <!-- END POST EXTRA STYLE -->
+    {% endblock %}
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+
+{% block basenavbar %}
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="{% block navbarclass %}container{% endblock %}">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            {% block projectnav %}
+            <a class="brand" href="#">Project Name</a>
+            {% endblock %}
+            <div class="nav-collapse collapse">
+                {% block accountnav %}
+                <p class="navbar-text pull-right">
+                    {% if user.is_authenticated %}
+                    Logged in as <a href="#" class="navbar-link">{{ user.username }}</a>
+                    {% else %}
+                    Please  <a href="{% url 'login' %}" class="navbar-link">Login</a>
+                    {% endif %}
+                </p>
+                {% endblock %}
+                {% block basenav %}
+                <ul class="nav">
+                    {% block nav %}
+                    {% endblock %}
+                </ul>
+                {% endblock %}
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block basecontent %}
+{% block basebreadcrumb %}
+<div class="{% block breadcrumbclass %}container{% endblock %}">
+    {% block breadcrumbs %}{% endblock %}
+</div> <!-- /container -->
+{% endblock %}
+<div class="{% block maincontainerclass %}container{% endblock %}">
+{% block content %}{% endblock %}
+</div> <!-- /container -->
+{% endblock %}
+
+<!-- Javascript -->
+{% block script_base %}
+{% slimall %}
+<script src="{% static 'jquery/jquery-1.8.3.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+{% block extra_scripts %}{% endblock %}
+{% endslimall %}
+{% endblock %}
+</body>
+</html>
