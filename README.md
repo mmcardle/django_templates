@@ -7,13 +7,11 @@ git clone git+https://github.com/mmcardle/django_templates
 ```
 
 #### Django 1.4
-----------
 ```
 django-admin.py startproject --template=./django_templates/project_template_1.4 YOUR_APP_NAME
 ```
 
 #### Django 1.5
-------------
 ```
 django-admin.py startproject --template=./django_templates/project_template_1.5 YOUR_APP_NAME
 ```
