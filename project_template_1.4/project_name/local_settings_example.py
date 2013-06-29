@@ -1,4 +1,5 @@
 DEBUG = True
+DJANGO_STATIC = not DEBUG
 
 DEBUG_APPS = ("debug_toolbar",)
 
