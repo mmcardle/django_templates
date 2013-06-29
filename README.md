@@ -16,6 +16,7 @@ django-admin.py startproject --template=./django_templates/project_template_1.4 
 django-admin.py startproject --template=./django_templates/project_template_1.5 YOUR_APP_NAME
 ```
 
+#### Setup (All versions)
 ```
 cd YOUR_APP_NAME
 
