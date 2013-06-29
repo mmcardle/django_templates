@@ -1,5 +1,4 @@
 ## Django Template Project with Bootstrap
-
 This is my default project starter, includes all my default apps plus bootstrap.
 
 ```
