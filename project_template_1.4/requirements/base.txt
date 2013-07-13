@@ -2,7 +2,8 @@ Django==1.4.3
 django-extensions==1.0.1
 South==0.7.6
 django-su==0.2
-django-admin-tools==0.4.1
+django-admin-tools==0.5.1
 django-crispy-forms==1.2.3
 django-static==1.5.5
 MySQL-python==1.2.4
+slimmer==0.1.30
