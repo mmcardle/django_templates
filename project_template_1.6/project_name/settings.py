@@ -187,5 +187,6 @@ LOGGING = {
 try:
     from local_settings import *
     INSTALLED_APPS += DEBUG_APPS
+    MIDDLEWARE_CLASSES += DEBUG_MIDDLEWARE_CLASSES
 except:
     pass
