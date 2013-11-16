@@ -20,7 +20,7 @@ DEBUG_TOOLBAR_PANELS = (
 
 
 def custom_show_toolbar(request):
-    return True  # Always show toolbar, for example purposes only.
+    return DEBUG  # Always show toolbar, for example purposes only.
 
 DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
