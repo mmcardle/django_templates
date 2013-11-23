@@ -33,7 +33,7 @@ pip install -r ./requirements/base.txt
 python ./manage.py syncdb
 python ./manage.py migrate
 python ./manage.py runserver
-
+```
 
 #### Setup (1.4 and 1.5)
 ```
