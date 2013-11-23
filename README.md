@@ -15,13 +15,27 @@ django-admin.py startproject --template=./django_templates/project_template_1.4 
 django-admin.py startproject --template=./django_templates/project_template_1.5 YOUR_APP_NAME
 ```
 
-#### Django 1.6 (Bootstrap 3)
+#### Django 1.6
+Includes Bootstrap 3, Django Compressor and Django Configurations
 ```
 django-admin.py startproject --template=./django_templates/project_template_1.5 YOUR_APP_NAME
 ```
 
+#### Setup (1.6)
+```
+cd YOUR_APP_NAME
 
-#### Setup (All versions)
+# Development
+pip install -r ./requirements/dev.txt
+# Production
+pip install -r ./requirements/base.txt
+
+python ./manage.py syncdb
+python ./manage.py migrate
+python ./manage.py runserver
+
+
+#### Setup (1.4 and 1.5)
 ```
 cd YOUR_APP_NAME
 
