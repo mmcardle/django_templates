@@ -18,7 +18,7 @@ django-admin.py startproject --template=./django_templates/project_template_1.5 
 #### Django 1.6
 Includes Bootstrap 3, Django Compressor and Django Configurations
 ```
-django-admin.py startproject --template=./django_templates/project_template_1.5 YOUR_APP_NAME
+django-admin.py startproject --template=./django_templates/project_template_1.6 YOUR_APP_NAME
 ```
 
 #### Setup (1.6)
