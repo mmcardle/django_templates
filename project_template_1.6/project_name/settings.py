@@ -151,6 +151,9 @@ class Base(Configuration):
         }
     }
 
+    # Configure Crispy
+    CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
     # Internationalization
     # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
