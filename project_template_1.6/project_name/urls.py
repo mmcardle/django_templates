@@ -21,7 +21,9 @@ urlpatterns = patterns('',
     #url(r"^su/", include("django_su.urls")),
 
     # Auth
-    url(r"^auth/", include("django.contrib.auth.urls")),
+    url(r"^accounts/", include("django.contrib.auth.urls")),
+    url(r'^accounts/profile/$', TemplateView.as_view(
+        template_name="accounts/profile.html"), name='profile'),
 )
 
 if settings.DEBUG:
